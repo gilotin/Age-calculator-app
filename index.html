@@ -24,11 +24,11 @@
 
 <body>
   <div class="age-app">
-    <form class="form" action="#" accept-charset="utf-8">
+    <form class="form" action="submit-form" method="POST">
 
       <div class="form__input">
         <label for="day">Day<label>
-            <input type="number" name="day" id="day"
+            <input type="number" name="day" id="day" 
               placeholder="DD" />
       </div>
 
@@ -49,15 +49,19 @@
     </form>
 
     <div class="result">
-      <p class="result__years"><span
+      <p class="result__years "><span
           class="result__years--purple">--</span>years</p>
       <p class="result__months"><span
           class="result__months--purple">--</span>months</p>
       <p class="result__days"><span
           class="result__days--purple">--</span>days</p>
-          <p>test</p>
+          
     </div>
   </div>
+  <script type="module" src="app.js"></script>
+
+    
+  </script>
 </body>
 
 </html>
