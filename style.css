@@ -66,3 +66,16 @@ border-bottom-right-radius: 6rem;
 }
 
 
+
+/* Form Errors */
+
+.form__error-required, .form__error-validation{
+  display: none;
+  font-size: 0.6rem;
+  color: var(--Light-red);
+ 
+}
+
+
+/* To add styles */
+

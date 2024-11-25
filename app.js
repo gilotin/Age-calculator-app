@@ -11,15 +11,20 @@ form.addEventListener("submit", (e) => {
   const resultMonths = document.querySelector(".result__months--purple");
   const resultDays = document.querySelector(".result__days--purple");
 
+const testForm = document.forms.testForm
+
+
 
   const formData = new FormData(e.target)
+  
+  const inputData = Object.fromEntries(formData)
+  
 
-  const day = formData.get("day");
-  const month = formData.get("month")
-  const year = formData.get("year")
+   errorCheck(inputData)
 
 
-  const result = getAge(day, month, year);
+  const result = getAge(inputData);
+  
 
   resultYears.textContent = `${result.years}`
   resultMonths.textContent = `${result.months}`
@@ -30,4 +35,38 @@ form.addEventListener("submit", (e) => {
 })
 
 
+const errorLableRequired = document.querySelector(".form__error-required");
+const errorLableValidate = document.querySelector(".form__error-validation");
 
+// fix the function 
+
+function errorCheck(inputData) {
+  
+  let day = Number(inputData.day);
+  let month = Number(inputData.month)
+  let year = Number(inputData.year)
+  
+  
+  
+  if(day == ""){
+  errorLableRequired.style.display = "block"
+  errorLableValidate.style.display = "none"
+    return
+    
+  }else{
+   errorLableRequired.style.display = "none";
+   
+  }
+  
+ 
+  
+  if( checkedDate <= 0 || checkedDate > 31){
+    errorLableValidate.style.display = "block"
+     errorLableRequired.style.display = "none"
+     return
+     
+  }else{
+  errorLableValidate.style.display = "none"
+  
+  }
+}

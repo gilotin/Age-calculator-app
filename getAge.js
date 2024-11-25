@@ -1,8 +1,14 @@
-function getAge(day, month, year) {
+function getAge(inputData) {
+  
+  let day = Number(inputData.day);
+  let month = Number(inputData.month)
+  let year = Number(inputData.year)
+  
+  
   const data = `${year}-${month}-${day}`
+  
   let inputDate = new Date(data)
   let presentDate = new Date()
-
 
   let years = presentDate.getFullYear() - inputDate.getFullYear();
   let months = presentDate.getMonth() - inputDate.getMonth();
@@ -19,6 +25,7 @@ function getAge(day, month, year) {
     years--
     months += 12
   }
+  
 
   return { years, months, days }
 
