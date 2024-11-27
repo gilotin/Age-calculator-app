@@ -1,30 +1,31 @@
+:root {
+  font-family: "Poppins", sans-serif;
 
-:root{
-font-family: "Poppins", sans-serif;
-  
---Purple: hsl(259, 100%, 65%);
---Light-red: hsl(0, 100%, 67%);
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
 
---White: hsl(0, 0%, 100%);
---Off-white: hsl(0, 0%, 94%);
---Light-grey: hsl(0, 0%, 86%);
---Smokey-grey: hsl(0, 1%, 44%);
---Off-black: hsl(0, 0%, 8%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
 
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-shadow: border-box;
   margin: 0;
 }
 
-img{
+img {
   display: block;
   width: 100%;
 }
 
 
-body{
+body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -32,50 +33,47 @@ body{
 }
 
 
-.age-app{
+.age-app {
   align-self: center;
   border: 1px solid var(--White);
   background-color: var(--White);
   padding: 3rem 1.5rem;
   border-radius: 2rem;
-border-bottom-right-radius: 6rem;
+  border-bottom-right-radius: 6rem;
 }
 
-.form{
-}
+.form {}
 
-.form__input{
+.form__input {
   gap: 0.6rem;
   color: var(--Light-grey);
   display: flex;
-  
-  
-}
 
-.form__input input{
 
 }
 
+.form__input input {}
 
-.form__button{
+
+.form__button {
   all: unset;
   border-radius: 100%;
   background: var(--Purple);
   margin: 1rem;
-  
+
 }
 
 
 
 /* Form Errors */
 
-.form__error-required, .form__error-validation{
+.form__error-required,
+.form__error-validation {
   display: none;
   font-size: 0.6rem;
   color: var(--Light-red);
- 
+
 }
 
 
 /* To add styles */
-

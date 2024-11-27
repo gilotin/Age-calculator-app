@@ -1,77 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
-  <link rel="icon" type="image/png" sizes="32x32"
-    href="./assets/images/favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
 
-  <link rel="stylesheet" href="style.css">
+        <title>Frontend Mentor | Age calculator app</title>
+    </head>
 
-  <title>Frontend Mentor | Age calculator app</title>
+    <body>
+        <div class="age-app">
+            <form
+                class="form"
+                type="multipart/form-data"
+                action="submit-form"
+                method="POST"
+                id="testForm"
+            >
+                <div class="form__input">
+                    <label class="form__label" for="day">Day</label>
+                    <input type="number" name="day" id="day" placeholder="DD" autofocus />
+                    <p class="form__error-validation">This must be a valid day</p>
+                    <p class="form__error-required">This field is required</p>
+                </div>
 
-</head>
+                <div class="form__input">
+                    <label class="form__label" for="month">Month </label>
+                    <input type="number" name="month" id="month" placeholder="MM" />
+                    <!-- Can try to use "data-" to target dynamically the error labels for all input forms -->
+                    <p class="form__error-required">This field is required</p>
+                    <p class="form__error-validation">This must be a valid month</p>
+                </div>
 
-<body>
-  <div class="age-app">
-    <form class="form" type="multipart/form-data" action="submit-form" method="POST" id="testForm">
+                <div class="form__input">
+                    <label class="form__label" for="year">Year</label>
+                    <input type="number" name="year" id="year" placeholder="YYYY" />
+                    <p class="form__error">This field is required</p>
+                    <p class="form__error">This must be a valid</p>
+                </div>
 
-      <div class="form__input">
-        <label class="form__lable" for="day">Day<label>
-            <input type="number" name="day" id="day"
-              placeholder="DD"
-              autofocus/>
-               <p class="form__error-validation">This must be a valid day
-              </p>
-            <p class="form__error-required">This field is required</p>
-      </div>
+                <button class="form__button" type="submit">
+                    <img src="./assets/images/icon-arrow.svg" alt="" />
+                </button>
+            </form>
 
-      <div class="form__input">
-        <label class="form__lable" for="month">Month <label>
-            <input type="number" name="month" id="month"
-              placeholder="MM"
-              />
-            <p class="form__error-required">This field is required</p>
-            <p class="form__error-validation">This must be a valid month
-            </p>
-      </div>
-
-      <div class="form__input">
-        <label class="form__lable" for="year">Year</label>
-        <input type="number" name="year" id="year"
-          placeholder="YYYY" />
-        <p class="form__error">This field is required</p>
-        <p class="form__error">This must be a valid </p>
-      </div>
-
-      <button class="form__button" type="submit"><img
-          src="./assets/images/icon-arrow.svg" alt=""></button>
-    </form>
-
-    <div class="result">
-      <p class="result__years "><span
-          class="result__years--purple">--</span>years</p>
-      <p class="result__months"><span
-          class="result__months--purple">--</span>months</p>
-      <p class="result__days"><span
-          class="result__days--purple">--</span>days</p>
-
-    </div>
-  </div>
-  <script type="module" src="app.js"></script>
-
-
-  </script>
-</body>
-
+            <div class="result">
+                <p class="result__years"><span class="result__years--purple">--</span>years</p>
+                <p class="result__months"><span class="result__months--purple">--</span>months</p>
+                <p class="result__days"><span class="result__days--purple">--</span>days</p>
+            </div>
+        </div>
+        <script type="module" src="app.js"></script>
+    </body>
 </html>
