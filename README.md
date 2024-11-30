@@ -5,9 +5,7 @@
 
 ![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
 
-## Welcome!
 
-Hi, this im my solution to Age Calculator on Frontend Mentor, hope you like it!
 
 ## Table of contents
 
