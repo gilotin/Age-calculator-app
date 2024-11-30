@@ -84,7 +84,7 @@ Users should be able to:
 
 -   GitHub - [Nikolay Toshev](https://github.com/gilotin)
 -   Frontend Mentor - [@gilotin](https://www.frontendmentor.io/profile/gilotin)
--   LinkedIn - [@yourusername](https://www.linkedin.com/in/nikolay-toshev-5536a025b/)
+-   LinkedIn - [Nikolay Toshev](https://www.linkedin.com/in/nikolay-toshev-5536a025b/)
 
 ## Acknowledgments
 
