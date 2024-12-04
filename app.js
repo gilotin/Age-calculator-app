@@ -24,24 +24,19 @@ form.addEventListener("submit", (e) => {
     resultDays.textContent = `${result.days}`;
 });
 
-const errorLabelRequired = document.querySelector(".form__error-required");
-const errorLabelValidate = document.querySelector(".form__error-validation");
-const formLabel = document.querySelector(".form__label");
-
 // fix the function
 
 function errorCheck(inputData) {
-    let day = Number(inputData.day);
-    let month = Number(inputData.month);
-    let year = Number(inputData.year);
+    // let day = Number(inputData.day);
+    // let month = Number(inputData.month);
+    // let year = Number(inputData.year);
 
     for (let element in inputData) {
-        // NOTE: NEED more work . Tomorrow !
+        const errorLabelRequired = document.querySelector(`.form__error-required-${element}`);
+        console.log(errorLabelRequired);
 
         if (inputData[element] == "") {
             errorLabelRequired.style.display = "block";
-            errorLabelValidate.style.display = "none";
-            formLabel.style.color = "red";
         } else {
             errorLabelRequired.style.display = "none";
         }

@@ -67,7 +67,9 @@ body {
 
 /* Form Errors */
 
-.form__error-required,
+.form__error-required-day,
+.form__error-required-month,
+.form__error-required-year,
 .form__error-validation {
   display: none;
   font-size: 0.6rem;
