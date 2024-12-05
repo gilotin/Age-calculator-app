@@ -1,34 +1,27 @@
-function getAge(inputData) {
-  
-  let day = Number(inputData.day);
-  let month = Number(inputData.month)
-  let year = Number(inputData.year)
-  
-  
-  const data = `${year}-${month}-${day}`
-  
-  let inputDate = new Date(data)
-  let presentDate = new Date()
+export function getAge(inputData) {
+    let day = Number(inputData.day);
+    let month = Number(inputData.month);
+    let year = Number(inputData.year);
 
-  let years = presentDate.getFullYear() - inputDate.getFullYear();
-  let months = presentDate.getMonth() - inputDate.getMonth();
-  let days = presentDate.getDate() - inputDate.getDate();
+    const data = `${year}-${month}-${day}`;
 
-  if (days < 0) {
-    months--
-    const lastMonth = new Date(presentDate.getFullYear(), presentDate
-      .getMonth(), 0);
-    days += lastMonth.getDate();
-  }
+    let inputDate = new Date(data);
+    let presentDate = new Date();
 
-  if (months < 0) {
-    years--
-    months += 12
-  }
-  
+    let years = presentDate.getFullYear() - inputDate.getFullYear();
+    let months = presentDate.getMonth() - inputDate.getMonth();
+    let days = presentDate.getDate() - inputDate.getDate();
 
-  return { years, months, days }
+    if (days < 0) {
+        months--;
+        const lastMonth = new Date(presentDate.getFullYear(), presentDate.getMonth(), 0);
+        days += lastMonth.getDate();
+    }
 
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    return { years, months, days };
 }
-
-export default getAge
