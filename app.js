@@ -27,25 +27,36 @@ form.addEventListener("submit", (e) => {
 // fix the function
 
 function errorCheck(inputData) {
-    // let day = Number(inputData.day);
-    // let month = Number(inputData.month);
-    // let year = Number(inputData.year);
-
     for (let element in inputData) {
+        const errorValidationLabel = document.querySelector(`.form__error-validation-${element}`);
         const errorLabelRequired = document.querySelector(`.form__error-required-${element}`);
-        console.log(errorLabelRequired);
+        const date = Number(inputData[element]);
+        const currentDate = new Date();
+        const presentYear = currentDate.getFullYear();
+
+        // Do make every error check for dates like 31 of April or 30 of February !!!
 
         if (inputData[element] == "") {
             errorLabelRequired.style.display = "block";
         } else {
             errorLabelRequired.style.display = "none";
-        }
+            if ((element == "day" && date <= 0) || date > 31) {
+                errorValidationLabel.style.display = "block";
+            } else {
+                errorValidationLabel.style.display = "none";
+            }
 
-        // if (day <= 0 || day > 31) {
-        //     errorLabelValidate.style.display = "block";
-        //     errorLabelRequired.style.display = "none";
-        // } else {
-        //     errorLabelValidate.style.display = "none";
-        // }
+            if ((element == "month" && date <= 0) || date > 12) {
+                errorValidationLabel.style.display = "block";
+            } else {
+                errorValidationLabel.style.display = "none";
+            }
+
+            if ((element == "year" && date <= 1900) || date > presentYear) {
+                errorValidationLabel.style.display = "block";
+            } else {
+                errorValidationLabel.style.display = "none";
+            }
+        }
     }
 }

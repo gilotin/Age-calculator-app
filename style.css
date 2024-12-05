@@ -70,7 +70,9 @@ body {
 .form__error-required-day,
 .form__error-required-month,
 .form__error-required-year,
-.form__error-validation {
+.form__error-validation-day,
+.form__error-validation-month,
+.form__error-validation-year {
   display: none;
   font-size: 0.6rem;
   color: var(--Light-red);
