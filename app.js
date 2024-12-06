@@ -14,7 +14,14 @@ form.addEventListener("submit", (e) => {
 
     const inputData = Object.fromEntries(formData);
 
-    errorCheck(inputData);
+    const hasError = errorCheck(inputData);
+
+    if (hasError) {
+        resultYears.textContent = `-- `;
+        resultMonths.textContent = `-- `;
+        resultDays.textContent = `-- `;
+        return;
+    }
 
     const result = getAge(inputData);
 

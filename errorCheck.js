@@ -1,4 +1,6 @@
 export function errorCheck(inputData) {
+    let hasError = false;
+
     for (let element in inputData) {
         const errorValidationLabel = document.querySelector(`.form__error-validation-${element}`);
         const errorLabelRequired = document.querySelector(`.form__error-required-${element}`);
@@ -12,27 +14,37 @@ export function errorCheck(inputData) {
         if (inputData[element] == "") {
             errorLabelRequired.style.display = "block";
             errorValidationLabel.style.display = "none";
+            hasError = true;
         } else {
             errorLabelRequired.style.display = "none";
+            hasError = false;
 
             if (element === "year" && (date < 1900 || date > presentYear)) {
                 errorValidationLabel.style.display = "block";
+                return (hasError = true);
             } else if (element == "month" && (date < 1 || date > 12)) {
                 errorValidationLabel.style.display = "block";
+                return (hasError = true);
             } else if (element == "day" && (date <= 0 || date > daysMaxRange(month, year))) {
                 errorValidationLabel.style.display = "block";
+                return (hasError = true);
             } else {
                 errorValidationLabel.style.display = "none";
             }
         }
     }
+    return hasError;
 }
 
 function daysMaxRange(month, year) {
-    let thirtyDayMonths = [4, 6, 9, 11];
+    let thirtyDayMonths = ["4", "6", "9", "11"];
 
     if (isLeapYear(year) && month == 2) {
         return 29;
+    }
+
+    if (month == 2) {
+        return 28;
     }
 
     if (thirtyDayMonths.includes(month)) {
