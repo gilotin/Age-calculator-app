@@ -30,6 +30,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   background-color: var(--Off-white);
+
 }
 
 
@@ -40,28 +41,69 @@ body {
   padding: 3rem 1.5rem;
   border-radius: 2rem;
   border-bottom-right-radius: 6rem;
+  min-width: 270px;
 }
 
-.form {}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form__flex-wrapper {
+  display: flex;
+  gap: 1rem;
+}
 
 .form__input {
   gap: 0.6rem;
   color: var(--Light-grey);
   display: flex;
+  flex-direction: column;
+  width: 90px;
+}
 
+.form__label {
+  color: var(--Smokey-grey);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.form__input>input {
+  border: 1px solid var(--Light-grey);
+  border-radius: 0.4rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 
 }
 
-.form__input input {}
+.form__styling-line {
+  border-bottom: 1px solid var(--Light-grey);
+  position: relative;
+  top: 2.9rem;
+  z-index: 1;
 
+}
 
 .form__button {
   all: unset;
   border-radius: 100%;
   background: var(--Purple);
-  margin: 1rem;
-
+  margin: auto;
+  width: 60px;
+  z-index: 2;
 }
+
+.form__button>img {
+  height: 2rem;
+  width: 2rem;
+  margin: auto;
+  padding: .8rem;
+}
+
+
 
 
 
@@ -74,10 +116,23 @@ body {
 .form__error-validation-month,
 .form__error-validation-year {
   display: none;
-  font-size: 0.6rem;
+  font-size: .8rem;
   color: var(--Light-red);
 
 }
 
+.result {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  font-size: 3.4rem;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.1;
+}
 
-/* To add styles */
+.result__years--purple,
+.result__days--purple,
+.result__months--purple {
+  color: var(--Purple);
+}
