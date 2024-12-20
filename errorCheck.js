@@ -71,10 +71,10 @@ function isLeapYear(year) {
 
 function colorLabelRed(error) {
     if (error) {
-        formLabel.forEach((e) => (e.style.color = "red"));
-        formInput.forEach((e) => (e.style.borderColor = "red"));
+        formLabel.forEach((e) => e.classList.add("form__label--error"));
+        formInput.forEach((e) => e.classList.add("form__input--error"));
     } else {
-        formLabel.forEach((e) => (e.style.color = "lightgrey"));
-        formInput.forEach((e) => (e.style.borderColor = "lightgrey"));
+        formLabel.forEach((e) => e.classList.remove("form__label--error"));
+        formInput.forEach((e) => e.classList.remove("form__input--error"));
     }
 }
