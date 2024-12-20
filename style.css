@@ -56,9 +56,8 @@ body {
   gap: 1rem;
 }
 
-.form__input {
+.form__section {
   gap: 0.6rem;
-  color: var(--Light-grey);
   display: flex;
   flex-direction: column;
   width: 90px;
@@ -70,7 +69,7 @@ body {
   text-transform: uppercase;
 }
 
-.form__input>input {
+.form__input {
   border: 1px solid var(--Light-grey);
   border-radius: 0.4rem;
   padding: 1rem;
@@ -103,10 +102,6 @@ body {
   padding: .8rem;
 }
 
-
-
-
-
 /* Form Errors */
 
 .form__error-required-day,
@@ -120,6 +115,17 @@ body {
   color: var(--Light-red);
 
 }
+
+.form__label--error {
+  color: var(--Light-red);
+}
+
+.form__input--error {
+  border-color: var(--Light-red);
+}
+
+
+/* Result section */
 
 .result {
   /* display: flex;
