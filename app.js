@@ -2,7 +2,6 @@ import { getAge } from "./getAge.js";
 import { errorCheck } from "./errorCheck.js";
 
 const form = document.querySelector(".form");
-const submitButton = document.querySelector(".form__button");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
