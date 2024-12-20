@@ -116,13 +116,13 @@ body {
 
 }
 
-.form__label--error {
+/* .form__label--error {
   color: var(--Light-red);
 }
 
 .form__input--error {
   border-color: var(--Light-red);
-}
+} */
 
 
 /* Result section */

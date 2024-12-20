@@ -1,10 +1,11 @@
+const formLabel = document.querySelectorAll(".form__label");
+const formInput = document.querySelectorAll(".form__input");
+
 export function errorCheck(inputData) {
     let hasError = false;
     for (let element in inputData) {
         const errorValidationLabel = document.querySelector(`.form__error-validation-${element}`);
         const errorLabelRequired = document.querySelector(`.form__error-required-${element}`);
-        const formLabel = document.querySelectorAll(".form__label");
-        const formInput = document.querySelector(".form__input");
 
         const date = Number(inputData[element]);
         const currentDate = new Date();
@@ -15,11 +16,10 @@ export function errorCheck(inputData) {
         if (inputData[element] === "") {
             errorLabelRequired.style.display = "block";
             errorValidationLabel.style.display = "none";
-            formLabel.forEach((e) => (e.style.color = "red"));
             hasError = true;
+            colorLabelRed(hasError);
         } else {
             errorLabelRequired.style.display = "none";
-            formLabel.forEach((e) => (e.style.color = "lightgrey"));
 
             if (element === "year" && (date < 1900 || date > presentYear)) {
                 errorValidationLabel.style.display = "block";
@@ -44,7 +44,7 @@ export function errorCheck(inputData) {
             }
         }
     }
-
+    colorLabelRed(hasError);
     return hasError;
 }
 
@@ -67,4 +67,14 @@ function daysMaxRange(month, year) {
 
 function isLeapYear(year) {
     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+
+function colorLabelRed(error) {
+    if (error) {
+        formLabel.forEach((e) => (e.style.color = "red"));
+        formInput.forEach((e) => (e.style.borderColor = "red"));
+    } else {
+        formLabel.forEach((e) => (e.style.color = "lightgrey"));
+        formInput.forEach((e) => (e.style.borderColor = "lightgrey"));
+    }
 }
