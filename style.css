@@ -142,3 +142,17 @@ body {
 .result__months--purple {
   color: var(--Purple);
 }
+
+
+@media screen and (min-width: 768px) {
+
+  .age-app {
+    width: 450px;
+  }
+
+  .form__button {
+    margin: 0 87%;
+  }
+
+
+}
