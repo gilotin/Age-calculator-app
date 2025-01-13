@@ -25,12 +25,22 @@ img {
 }
 
 
-body {
+main {
   display: flex;
   justify-content: center;
   min-height: 100vh;
   background-color: var(--Off-white);
 
+}
+
+.app__name {
+  text-align: center;
+  padding: 1rem;
+  color: var(--Purple);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  background-color: var(--Off-white);
+  border-radius: 2rem;
 }
 
 
