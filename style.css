@@ -60,7 +60,7 @@ body {
   gap: 0.6rem;
   display: flex;
   flex-direction: column;
-  width: 90px;
+  width: 5.6rem;
 }
 
 .form__label {
@@ -69,13 +69,24 @@ body {
   text-transform: uppercase;
 }
 
+
+
 .form__input {
   border: 1px solid var(--Light-grey);
   border-radius: 0.4rem;
   padding: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
+}
 
+.form__input::-webkit-inner-spin-button,
+.form__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form__input:hover {
+  cursor: pointer;
 }
 
 .form__styling-line {
@@ -154,5 +165,7 @@ body {
     margin: 0 87%;
   }
 
-
+  .form__section {
+    width: 7rem;
+  }
 }
